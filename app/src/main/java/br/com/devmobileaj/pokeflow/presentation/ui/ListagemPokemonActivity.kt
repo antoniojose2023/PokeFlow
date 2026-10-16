@@ -33,11 +33,7 @@ class ListagemPokemonActivity : AppCompatActivity() {
     private val viewModelPokemon by viewModels<PokemonViewModel> {
           ViewModelFactory(repositoryImpl)
     }
-
     private val pokemonAdapter by lazy { PokemonAdapter() }
-
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,16 +51,16 @@ class ListagemPokemonActivity : AppCompatActivity() {
 
                     when(state){
                         is States.Loader -> {
-                              // binding.progressBarPokemon.visibility = View.VISIBLE
+                              binding.progressBarPokemon.visibility = View.VISIBLE
                         }
                         is States.OnSeucesso -> {
                             val pokemons = state.pokemons
                             pokemonAdapter.addLista( pokemons )
-                           // binding.progressBarPokemon.visibility = View.GONE
+                            binding.progressBarPokemon.visibility = View.GONE
                         }
                         is States.OnError -> {
                             Log.i("TAG", "error: ${state.mensage}")
-                           // binding.progressBarPokemon.visibility = View.GONE
+                            binding.progressBarPokemon.visibility = View.GONE
                         }
                     }
         }
@@ -87,11 +83,18 @@ class ListagemPokemonActivity : AppCompatActivity() {
 //        binding.rvPokemons.setOnScrollChangeListener { _, _, _, _, _ ->
 //              val proximo = canScrollVertically(binding.rvPokemons, 1)
 //              if(!proximo)
-//                   // viewModelPokemon.getPokemons()
+//                   viewModelPokemon.getNextPage()
 //        }
 
-    }
+         binding.rvPokemons.setOnScrollListener(object : RecyclerView.OnScrollListener(){
+              override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                   if(dy > 0 && !recyclerView.canScrollVertically( 1)){
+                         viewModelPokemon.getNextPage()
+                  }
+              }
 
+         })
+    }
 
     fun configurarRecyclerView(){
           binding.rvPokemons.layoutManager = LinearLayoutManager(this)
@@ -99,3 +102,5 @@ class ListagemPokemonActivity : AppCompatActivity() {
 
     }
 }
+
+
