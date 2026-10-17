@@ -31,7 +31,7 @@
 
 | Splash | Listagem | Detalhe |
 |:------:|:--------:|:-------:|
-| <img src="docs/screenshots/splash.png" width="240" alt="Tela de splash"/> | <img src="docs/screenshots/listagem.png" width="240" alt="Tela de listagem"/> | <img src="docs/screenshots/detalhe.png" width="240" alt="Tela de detalhe"/> |
+| <img width="1280" height="2856" alt="Image" src="https://github.com/user-attachments/assets/44f77a8d-361a-4e51-a29a-941b3c8444ae" /> | <img width="1280" height="2856" alt="Image" src="https://github.com/user-attachments/assets/a1724908-4793-45ff-9eb4-13b402fb01f8" /> | <img width="1280" height="2856" alt="Image" src="https://github.com/user-attachments/assets/684ece8d-f6bf-4b37-90e8-f6f29cd8e55b" /> |
 
 ---
 
