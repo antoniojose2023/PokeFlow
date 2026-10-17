@@ -12,7 +12,7 @@ import kotlinx.coroutines.withContext
 import kotlin.collections.emptyList
 
 class PokemonRepositoryImpl(
-    private val apiPokemon: ApiPokemon,
+    val apiPokemon: ApiPokemon,
 ): IPokemonRepository {
     override suspend fun getPokemons(offset: Int, limit: Int): PaginaPokemon = withContext(Dispatchers.IO){
 

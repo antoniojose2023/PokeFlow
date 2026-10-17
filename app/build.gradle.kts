@@ -44,7 +44,16 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.recyclerview)
     implementation(libs.material)
+
+    //Testes unitários
     testImplementation(libs.junit)
+    testImplementation("com.google.truth:truth:1.4.5")
+    testImplementation("org.mockito:mockito-core:5.23.0")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.11.0")
+    testImplementation("androidx.arch.core:core-testing:2.2.0")
+
+
+    //Testes instrumentados
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
 
