@@ -1,8 +1,12 @@
 package br.com.devmobileaj.pokeflow.presentation
 
+import android.content.res.ColorStateList
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat.getColor
+import androidx.core.graphics.drawable.toDrawable
 import androidx.recyclerview.widget.RecyclerView
+import br.com.devmobileaj.pokeflow.R
 import br.com.devmobileaj.pokeflow.databinding.ItemPokemonBinding
 import br.com.devmobileaj.pokeflow.domain.pokemon.Pokemon
 import br.com.devmobileaj.pokeflow.domain.pokemondetail.PokemonDetail
@@ -41,6 +45,12 @@ class PokemonAdapter(var onClick: (PokemonDetail) -> Unit={}): RecyclerView.Adap
         fun bind(pokemon: PokemonDetail){
                binding.tvNomePokemon.text = pokemon.name
                binding.tvTypePokemon.text = pokemon.types[0].type.name
+
+               val cores = listOf(R.color.amarelo, R.color.azul_claro, R.color.laranja, R.color.verde)
+               val corAleatoria = cores.random()
+               binding.tvTypePokemon.backgroundTintList = (ColorStateList.valueOf(getColor(binding.root.context, corAleatoria)))
+
+
                binding.tvCodigoPokemon.text = "#"+pokemon.id.toString()
 
 
