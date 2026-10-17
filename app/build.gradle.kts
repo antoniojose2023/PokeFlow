@@ -56,6 +56,8 @@ dependencies {
     //Testes instrumentados
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation("androidx.test.espresso:espresso-intents:3.6.1")
+    androidTestImplementation( "androidx.test.espresso:espresso-contrib:3.7.0")
 
 
     // ViewModel e LiveData (Essencial para arquitetura MVVM)

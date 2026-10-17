@@ -9,7 +9,7 @@
     tools:context=".presentation.ui.SplashScreenActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/ivLogoSplash"
         android:layout_width="128dp"
         android:layout_height="190dp"
         android:layout_marginTop="192dp"
@@ -20,7 +20,7 @@
         app:srcCompat="@drawable/ic_logo" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvTituloSplash"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -31,7 +31,7 @@
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/ivLogoSplash" />
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -45,7 +45,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tvSubTituloSplash"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -55,7 +55,7 @@
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloSplash" />
 
     <View
         android:id="@+id/divider"
@@ -65,5 +65,5 @@
         android:background="@color/vermelho"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/tvSubTituloSplash" />
 </androidx.constraintlayout.widget.ConstraintLayout>
